@@ -24,17 +24,26 @@ FetchContent_MakeAvailable(googletest)
 ########################################################
 # Config for creating, running a googletest binary.
 ########################################################
+# Enables testing in CMake.  AFAICT, this is nothing to
+# do with googletest specifically.  It is also relevant
+# for other testing frameworks.
 enable_testing()
 
+# States that we want the hello_test binary to be built
+# by compiling the listed source file.
 add_executable(
   hello_test
   hello_test.cc
 )
+# States that we want the hello_test binary to be linked
+# to GoogleTest.
 target_link_libraries(
   hello_test
   GTest::gtest_main
 )
 
+# These statements just enable CMakes test runner (ctest)
+# to discover the tests included in the hello_test binary.
 include(GoogleTest)
 gtest_discover_tests(hello_test)
 ########################################################
