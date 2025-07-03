@@ -10,6 +10,8 @@ public:
     }
     void testMultiplication()
     {
-        TS_ASSERT(1 * 2 > 2);
+        TS_TRACE("What does this thing do??");
+        TS_ASSERT_EQUALS(1 * 2, 3);
+        TS_TRACE("What does this thing do2??");
     }
 };

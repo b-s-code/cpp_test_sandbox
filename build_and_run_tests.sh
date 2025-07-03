@@ -10,4 +10,7 @@ CXXTEST=cxxtest # Used to tell compiled where to find cxxtest's headers.
 g++ -o runner ./runner.cpp -I$CXXTEST
 
 # Execute the test runner.
+# Note that if you want to see output related to TS_TRACE statements, then you
+# need to pass the -v option to runner.  Also, to see available tests, and test
+# suites, pass --help-tests.  Passing -h shows CLI info.
 ./runner
