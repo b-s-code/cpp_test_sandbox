@@ -43,3 +43,5 @@
 # cxxtest files
 runner
 runner.cpp
+
+__pycache__/
