@@ -8,4 +8,8 @@ public:
         TS_ASSERT(1 + 2 > 2);
         TS_ASSERT_EQUALS(1 + 2, 3);
     }
+    void testMultiplication()
+    {
+        TS_ASSERT(1 * 2 > 2);
+    }
 };
